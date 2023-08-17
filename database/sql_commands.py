@@ -16,11 +16,16 @@ class Database:
         self.connection.commit()
 
 
-    def sql_insert_user_cmd(self, telegram_id, username,
-                                  first_name, last_name):
+    def sql_insert_user_cmd(self, telegram_id,
+                                  username,
+                                  first_name,
+                                  last_name):
 
         self.cursor.execute(sql_queries.START_INSERT_USER,
-                                  (None, telegram_id, username,
-                                   first_name, last_name))
+                                  (None,
+                                   telegram_id,
+                                   username,
+                                   first_name,
+                                   last_name))
 
         self.connection.commit()
